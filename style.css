@@ -1,0 +1,28 @@
+/* Declare global css variables with the tree-structural :root pseudo-class */
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+#divContainer {
+  display: grid;
+  justify-content: center;
+  margin: auto;
+  grid-gap: 0;
+  /* Take the value of the value of the grid and col variables and make that amount of rows and columns */
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  width: 500px;
+  height: 500px;
+}
+
+.grid-item {
+  width: 1fr;
+  height: 1fr;
+  border: solid 1px;
+  border-color: black;
+}
+
+.colorFill {
+  background-color: brown;
+}
